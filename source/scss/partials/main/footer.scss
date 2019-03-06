@@ -1,0 +1,167 @@
+.footer-area {
+  background-color: #222;
+  text-align: center;
+  padding: 75px 0 0 0;
+
+  .main-footer {
+    text-align: left;
+    padding-bottom: 64px;
+    border-bottom: 2px solid rgba(#555, 0.15);
+
+    li {
+      margin: 5px 0;
+    }
+
+    .column-title {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .column-content a {
+      color: #888;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: $font-2;
+
+      &:hover,
+      &:focus {
+        color: lighten(#999, 25%);
+      }
+    }
+
+    .brand-logo {
+      color: #fff;
+      margin-bottom: 12px;
+      font-family: $font-2;
+      font-weight: bold;
+      font-size: 42px;
+      letter-spacing: 0.7px;
+      line-height: 100%;
+    }
+
+    .brand-description {
+      color: #b9b9b9;
+      font-size: 13px;
+    }
+  }
+
+  .mini-footer {
+    padding: 15px 0;
+
+    .social-medias {
+      float: right;
+
+      a {
+        height: 28px;
+        width: 28px;
+        display: inline-block;
+        background-color: #222;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 14px;
+        line-height: 28px;
+        margin: 0 4px;
+        transition: $transition-x2;
+
+        &.twitter {
+          background-color: #1DA1F2;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#1DA1F2, 8%);
+          }
+        }
+
+        &.instagram {
+          background-color: #C32361;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#C32361, 8%);
+          }
+        }
+
+        &.linkedin {
+          background-color: #0077B5;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#0077B5, 8%);
+          }
+        }
+
+        &.youtube {
+          background-color: #c33a38;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#c33a38, 8%);
+          }
+        }
+
+        &.github {
+          background-color: #6e5494;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#6e5494, 8%);
+          }
+        }
+
+        &.facebook {
+          background-color: #3B5998;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#3B5998, 8%);
+          }
+        }
+
+        &.dribbble {
+          background-color: #C32361;
+
+          &:focus,
+          &:hover {
+            background-color: darken(#C32361, 8%);
+          }
+        }
+      }
+    }
+
+    .copyright-notice {
+      float: left;
+      color: #f3f3f3;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .footer-area {
+    .main-footer {
+      text-align: center;
+      padding-bottom: 15px;
+
+      .column-content {
+        margin-bottom: 30px;
+      }
+    }
+
+    .mini-footer {
+      padding: 25px 0;
+      text-align: center;
+
+      .social-medias {
+        float: none;
+        margin-bottom: 13px;
+      }
+
+      .copyright-notice {
+        float: none;
+        font-size: 13px;
+      }
+    }
+  }
+}

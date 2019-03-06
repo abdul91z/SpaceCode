@@ -1,0 +1,153 @@
+.about-area {
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .about-intro {
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 55px;
+      font-size: 15px;
+
+      b {
+        color: #444;
+      }
+    }
+  }
+
+  .about-services {
+    margin-bottom: 105px;
+
+    .single-service {
+      text-align: center;
+      box-shadow: 0 1px 7px 0 rgba(#000, .17);
+      padding: 32px 38px;
+      transition: $transition;
+      background-color: #fff;
+
+      .icon {
+        font-size: 50px;
+        margin-bottom: 19px;
+        display: inline-block;
+      }
+
+      .service-title {
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 13px;
+        font-family: $font-2;
+        color: #444;
+      }
+
+      .service-description {
+        color: #777;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .about-video {
+    .content-part {
+      .video-title {
+        font-size: 32px;
+        margin-bottom: 14px;
+        font-weight: 700;
+      }
+
+      .video-description {
+        color: #555;
+        font-size: 14px;
+      }
+
+      .btn.work {
+        margin-top: 8px;
+        color: #fff;
+      }
+    }
+
+    .video-part {
+      .embed-responsive-item {
+        background-image: url(../img/video.jpg);
+
+        &:before {
+          background-color: rgba(#000, .2);
+        }
+
+        &,
+        &:before {
+          border-radius: 3px;
+        }
+
+        .play-wrapper {
+          transition: $transition-x2;
+          transform: scale(1);
+          width: 56px;
+          height: 56px;
+          background-color: #fff;
+          border-radius: 50%;
+          margin: auto;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          .icon {
+            line-height: 58px;
+            color: #222;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+          }
+        }
+
+        &:hover {
+          .play-wrapper {
+            transform: scale(1.075);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .about-area {
+    .about-services {
+      .single-service {
+        .service-description {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .about-video {
+      .content-part {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .about-area {
+    .about-services {
+      .single-service {
+        padding: 40px 38px;
+
+        .service-description {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .about-services>[class*='col']:not(:last-child) {
+      .single-service {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

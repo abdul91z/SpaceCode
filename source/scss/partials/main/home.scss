@@ -1,0 +1,364 @@
+.home-area {
+  background-image: url(../img/home-area.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  color: #fff;
+
+  &:before {
+    background-color: rgba(#000, .65);
+  }
+
+  .greet {
+    margin-bottom: 25px;
+    font-family: $font-2;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  .skills {
+    font-weight: 700;
+    font-size: 71px;
+    margin-bottom: 28px;
+    letter-spacing: 0.3px;
+    font-family: $font-2;
+  }
+
+  .cd-words-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+
+    b {
+      display: inline-block;
+      position: absolute;
+      white-space: nowrap;
+      left: 0;
+      top: 0;
+
+      &.is-visible {
+        position: relative;
+      }
+    }
+  }
+
+  .cd-headline.clip {
+    span {
+      display: inline-block;
+    }
+
+    .cd-words-wrapper {
+      // overflow: hidden;
+      vertical-align: top;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #b9b9b9;
+      }
+    }
+
+    b {
+      opacity: 0;
+
+      &.is-visible {
+        opacity: 1;
+
+        &:after {
+          content: '';
+          display: block;
+          margin-top: 5px;
+          height: 5px;
+          width: 100%;
+          background-color: #222;
+        }
+      }
+    }
+  }
+
+  .description {
+    margin-bottom: 37px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .btn {
+    margin: 0 9px;
+    box-shadow: 0 3px 6px 0 rgba(#000, 0.2);
+
+    &.work {}
+
+    &.hire {}
+  }
+
+  .scroll-icon {
+    position: absolute;
+    width: 29px;
+    right: 0;
+    bottom: 3.75%;
+    left: 0;
+    margin: 0 auto;
+
+    .mouse {
+      width: 3px;
+      padding: 5px 11px;
+      height: 28px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      opacity: .75;
+      box-sizing: content-box;
+      background-color: rgba(#000, .35);
+    }
+
+    .wheel {
+      width: 3px;
+      height: 9px;
+      border-radius: 25%;
+      background-color: #fff;
+      animation-name: scrollDown;
+      animation-duration: 1.3s;
+      animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        opacity: 0;
+      }
+
+      10% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(15px);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.white-variant {
+    background-image: url(../img/home-area-2.jpg);
+    color: #222;
+
+    &:before {
+      background-color: rgba(#000, .0);
+    }
+
+    .cd-headline.clip {
+      .cd-words-wrapper {
+        &::after {
+          background-color: #999;
+        }
+      }
+    }
+
+    .description {
+      color: #333;
+    }
+
+    .scroll-icon {
+      .mouse {
+        border: 2px solid #111;
+        background-color: rgba(#fff, .15);
+      }
+
+      .wheel {
+        background-color: #111;
+      }
+    }
+  }
+
+  &.left-align-variant {
+    .greet {
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      margin-bottom: 22px;
+    }
+
+    .description {
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      margin: 0 9px 0 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      .greet {
+        margin-bottom: 18px;
+      }
+
+      .skills {
+        margin-bottom: 20px;
+        font-size: 55px;
+      }
+
+      .description {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      .skills {
+        font-size: 44px;
+      }
+
+      .btn {
+        margin: 0 9px 12px 0;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 375px) {
+      .skills {
+        font-size: 34px;
+      }
+    }
+  }
+
+  &.video-variant {
+    #wrapper_homeVideo:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .60);
+    }
+  }
+
+  & {
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.nexus-variant {
+    .section-shape {
+      position: absolute;
+      bottom: -1px;
+      fill: #fff;
+    }
+
+    .scroll-icon {
+      display: none;
+    }
+  }
+
+  &.wave-variant {
+    .section-shape {
+      position: absolute;
+      bottom: -2px;
+      fill: #fff;
+    }
+
+    .scroll-icon {
+      display: none;
+    }
+  }
+
+  &.triangle-variant {
+    .section-shape {
+      position: absolute;
+      bottom: -2px;
+      fill: #fff;
+    }
+
+    .scroll-icon {
+      display: none;
+    }
+  }
+}
+
+// SVG shape Hacks for IE11
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  .home-area {
+    &.nexus-variant {
+      .section-shape {
+        width: 100%;
+        height: 10%;
+      }
+    }
+
+    &.wave-variant {
+      .section-shape {
+        height: 10%;
+        width: 100%;
+      }
+    }
+
+    &.triangle-variant {
+      .section-shape {
+        height: 10%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-down(md) {
+  .home-area {
+    height: auto;
+    padding: 138px 0 90px 0;
+
+    .skills {
+      font-size: 54px;
+    }
+
+    .cd-headline.clip {
+      b {
+        &.is-visible {
+          &:after {
+            margin-top: 3px;
+            height: 3px;
+          }
+        }
+      }
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    .scroll-icon {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .home-area {
+    .skills {
+      font-size: 40px;
+    }
+
+    .btn {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .home-area {
+    .skills {
+      font-size: 32px;
+    }
+  }
+}

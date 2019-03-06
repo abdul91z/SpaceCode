@@ -1,0 +1,11 @@
+.home-area {
+  .cd-headline.clip {
+    b {
+      &.is-visible {
+        &:after {
+          background-color: $color-scheme;
+        }
+      }
+    }
+  }
+}

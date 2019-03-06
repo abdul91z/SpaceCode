@@ -1,0 +1,40 @@
+.services-area {
+  .single-service {
+    text-align: left;
+    box-shadow: 0 2px 8px 0 rgba(#000, 0.10);
+    padding: 27px 24px;
+    margin-bottom: 37px;
+    transition: $transition;
+    background-color: #fff;
+
+    .icon {
+      font-size: 50px;
+      margin-right: 22px;
+      display: inline-block;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      font-family: $font-2;
+      color: #444;
+    }
+
+    .service-description {
+      color: #777;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .services-area {
+    .single-service {
+      .service-description {
+        font-size: 13px;
+      }
+    }
+  }
+}

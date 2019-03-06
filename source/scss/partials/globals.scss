@@ -1,0 +1,206 @@
+@import 'init';
+
+/* Disable outline */
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Body */
+
+body {
+  font-family: $font-1;
+  font-size: 14px;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Typography */
+
+
+i.icon {
+  line-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-1;
+}
+
+b {
+  font-weight: bold;
+}
+
+a {
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@mixin anchor-black() {
+  color: #222;
+
+  &:hover,
+  &:focus {
+    color: lighten(#222, 25%);
+  }
+}
+
+/* Buttons */
+
+@mixin radius-button() {
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 42px;
+  font-size: 14px;
+  font-family: $font-2;
+  border-radius: 30px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: darken(#fff, 15%);
+    background-color: darken(#fff, 15%);
+  }
+}
+
+.button-main {
+  @include radius-button();
+}
+
+.button-main.button-scheme {
+  color: #fff;
+}
+
+/* Section, title & description styles */
+
+.single-section {
+  padding: 110px 0;
+  background-color: #fff;
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+
+    .section-title {
+      font-weight: 800;
+      font-size: 40px;
+      margin-bottom: 10px;
+      font-family: $font-1;
+      letter-spacing: -0.25px;
+
+      &:after {
+        content: '';
+        display: block;
+        margin: 15px auto 12px auto;
+        height: 3px;
+        width: 75px;
+        background-color: #222;
+      }
+    }
+
+    .section-description {
+      font-weight: 400;
+      font-size: 14px;
+      color: #696969;
+    }
+  }
+
+  &.element-cover-bg {
+    .section-heading {
+
+      .section-title,
+      .section-description {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Silver section background */
+
+.single-section.silver-bg {
+  background-color: #f8f8f8;
+}
+
+/* Overlay background */
+
+.element-cover-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  position: relative;
+}
+
+.element-cover-bg:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, .65);
+}
+
+/* Disable Owl.carousel dots outline */
+
+.owl-theme .owl-dots .owl-dot {
+  outline: none;
+}
+
+/* Magnific Popup scale animation */
+
+.mfp-scale.mfp-bg {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.mfp-scale.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-scale.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-scale.mfp-wrap .mfp-content {
+  transform: scale(0.8);
+  transition: all 0.2s ease-out;
+}
+
+.mfp-scale.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-scale.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Breakpoints styles */
+
+@include media-breakpoint-down(xs) {
+  .single-section {
+    padding: 80px 0;
+  }
+}

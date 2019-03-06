@@ -1,0 +1,39 @@
+.getstarted-area {
+  background-image: url(../img/home-area.jpg);
+  background-attachment: fixed;
+  padding: 85px 0;
+
+  &:before {
+    background-color: rgba(#000, .65);
+  }
+
+  .getstarted-title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .getstarted-description {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+
+  .getstarted {}
+}
+
+@include media-breakpoint-down(xs) {
+  .getstarted-area {
+    .getstarted-title {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .getstarted-description {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+}

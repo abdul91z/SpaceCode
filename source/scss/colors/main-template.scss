@@ -1,0 +1,63 @@
+/*=========================================
+=            Table of Contents            =
+=========================================*/
+/**
+ * Bootstrap Template
+ * Global Styles
+ * Navbar
+ * Home
+ * About
+ * Services
+ * Portfolio
+ * Testimonials
+ * Pricing
+ * Blog
+ * Contact
+ */
+
+
+
+/*==========================================
+=            Bootstrap Template            =
+==========================================*/
+@import 'partials/bootstrap-template';
+/*=====================================
+=            Global Styles            =
+=====================================*/
+@import 'partials/main/globals';
+/*==============================
+=            Navbar            =
+==============================*/
+@import 'partials/main/navbar';
+/*============================
+=            Home            =
+============================*/
+@import 'partials/main/home';
+/*=============================
+=            About            =
+=============================*/
+@import 'partials/main/about';
+/*================================
+=            Services            =
+================================*/
+@import 'partials/main/services';
+/*=================================
+=            Portfolio            =
+=================================*/
+@import 'partials/main/portfolio';
+/*====================================
+=            Testimonials            =
+====================================*/
+@import 'partials/main/testimonials';
+/*===============================
+=            Pricing            =
+===============================*/
+@import 'partials/main/pricing';
+/*============================
+=            Blog            =
+============================*/
+@import 'partials/main/blog';
+/*===============================
+=            Contact            =
+===============================*/
+@import 'partials/main/contact';

@@ -1,0 +1,17 @@
+.blog-area {
+  .card {
+    .card-body {
+      .post-summary {
+        .author-name {
+          color: $color-scheme;
+
+          &:hover,
+          &:focus {
+            color: darken($color-scheme, 15%)
+          }
+        }
+
+      }
+    }
+  }
+}
